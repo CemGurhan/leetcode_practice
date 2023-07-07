@@ -1,6 +1,8 @@
 package maxdepthofbinarytree
 
-func maxDepth(root *TreeNode) int {
+import m "github.com/cemgurhan/leetcodepractice/MaxDepthOfBinaryTree/models"
+
+func maxDepth(root *m.TreeNode) int {
 	if root == nil {
 		return 0
 	}

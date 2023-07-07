@@ -1,4 +1,4 @@
-package maxdepthofbinarytree
+package models
 
 type TreeNode struct {
 	Val   int

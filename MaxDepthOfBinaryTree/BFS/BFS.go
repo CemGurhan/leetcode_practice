@@ -1,8 +1,10 @@
 package maxdepthofbinarytree
 
-type Queue []*TreeNode
+import m "github.com/cemgurhan/leetcodepractice/MaxDepthOfBinaryTree/models"
 
-func maxDepth(root *TreeNode) int {
+type Queue []*m.TreeNode
+
+func maxDepth(root *m.TreeNode) int {
 	queue := make(Queue, 0)
 	queue.Enqueue(root)
 	maxDepth := 0
@@ -20,14 +22,14 @@ func maxDepth(root *TreeNode) int {
 	return maxDepth
 }
 
-func (q *Queue) Enqueue(node *TreeNode) {
+func (q *Queue) Enqueue(node *m.TreeNode) {
 	if node == nil {
 		return
 	}
 	*q = append(*q, node)
 }
 
-func (q *Queue) Dequeue() *TreeNode {
+func (q *Queue) Dequeue() *m.TreeNode {
 	dequeuedNode := (*q)[0]
 	*q = (*q)[1:]
 	return dequeuedNode
