@@ -1,4 +1,4 @@
-package inorder
+package postorder
 
 import (
 	"testing"
@@ -39,10 +39,10 @@ func createBinaryTree[T rune]() TreeNode[T] {
 	}
 }
 
-func TestDFS_WithValidBinaryTree_ReturnsCorrectInOrderTraversal(t *testing.T) {
+func TestDFS_WithBinaryTree_ReturnsValidPostOrderTraversal(t *testing.T) {
 	binaryTree := createBinaryTree[rune]()
-	actualTraversal := dfs[rune](&binaryTree)
-	expectedTraversal := []rune{'D', 'B', 'E', 'A', 'F', 'C', 'G'}
+	actualTraversal := postOrder[rune](&binaryTree)
+	expectedTraversal := []rune{'D', 'E', 'B', 'F', 'G', 'C', 'A'}
 
 	require.Equal(t, expectedTraversal, actualTraversal)
 }

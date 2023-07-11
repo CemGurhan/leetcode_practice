@@ -1,4 +1,4 @@
-package inorder
+package recursive
 
 import (
 	"testing"
@@ -41,8 +41,9 @@ func createBinaryTree[T rune]() TreeNode[T] {
 
 func TestDFS_WithValidBinaryTree_ReturnsCorrectInOrderTraversal(t *testing.T) {
 	binaryTree := createBinaryTree[rune]()
-	actualTraversal := dfs[rune](&binaryTree)
+	traversed := make([]rune, 0)
+	inOrder[rune](&binaryTree, &traversed)
 	expectedTraversal := []rune{'D', 'B', 'E', 'A', 'F', 'C', 'G'}
 
-	require.Equal(t, expectedTraversal, actualTraversal)
+	require.Equal(t, expectedTraversal, traversed)
 }
