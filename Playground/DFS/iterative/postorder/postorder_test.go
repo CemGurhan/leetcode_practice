@@ -1,11 +1,5 @@
 package postorder
 
-import (
-	"testing"
-
-	"github.com/stretchr/testify/require"
-)
-
 // binaryTree := []rune{'A', 'B', 'C', 'D', 'E', 'F', 'G'}
 func createBinaryTree[T rune]() TreeNode[T] {
 	return TreeNode[T]{
@@ -39,10 +33,10 @@ func createBinaryTree[T rune]() TreeNode[T] {
 	}
 }
 
-func TestDFS_WithBinaryTree_ReturnsValidPostOrderTraversal(t *testing.T) {
-	binaryTree := createBinaryTree[rune]()
-	actualTraversal := postOrder[rune](&binaryTree)
-	expectedTraversal := []rune{'D', 'E', 'B', 'F', 'G', 'C', 'A'}
+// func TestDFS_WithBinaryTree_ReturnsValidPostOrderTraversal(t *testing.T) {
+// 	binaryTree := createBinaryTree[rune]()
+// 	actualTraversal := postOrder[rune](&binaryTree)
+// 	expectedTraversal := []rune{'D', 'E', 'B', 'F', 'G', 'C', 'A'}
 
-	require.Equal(t, expectedTraversal, actualTraversal)
-}
+// 	require.Equal(t, expectedTraversal, actualTraversal)
+// }

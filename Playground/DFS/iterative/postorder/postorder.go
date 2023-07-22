@@ -6,13 +6,10 @@ type TreeNode[T any] struct {
 	Right *TreeNode[T]
 }
 
-// binaryTree := []rune{'A', 'B', 'C', 'D', 'E', 'F', 'G'}
-func postOrder[T any](root *TreeNode[T]) (traversed []T) {
+// // binaryTree := []rune{'A', 'B', 'C', 'D', 'E', 'F', 'G'}
+// func postOrder[T any](root *TreeNode[T]) (traversed []T) {
 
-}
+// }
 
 // left -> right -> root
 // expectedTraversal := []rune{'D', 'E', 'B', 'F', 'G', 'C', 'A'}
-
-// stack = [A, C, B, E, D]
-// stack = [A, B, D]
